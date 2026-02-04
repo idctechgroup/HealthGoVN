@@ -1,0 +1,868 @@
+/*
+Theme Name: HealthGoVietNam
+Theme URI: https://healthgovietnam.com
+Author: Your Name
+Author URI: https://example.com
+Description: A modern and clean WordPress theme with responsive design
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: healthgovietnam
+Tags: blog, custom-header, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #005177;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-branding {
+    display: inline-block;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.site-title a {
+    color: #333;
+}
+
+.site-description {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.main-navigation {
+    margin-top: 20px;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-navigation ul li a {
+    padding: 10px 15px;
+    display: block;
+    color: #333;
+}
+
+.main-navigation ul li a:hover,
+.main-navigation ul li.current-menu-item a {
+    color: #0073aa;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.site-content {
+    padding: 40px 0;
+}
+
+.content-area {
+    width: 70%;
+    float: left;
+    padding-right: 40px;
+}
+
+.widget-area {
+    width: 30%;
+    float: right;
+}
+
+/* Posts */
+.post {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.entry-header {
+    margin-bottom: 20px;
+}
+
+.entry-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.entry-title a {
+    color: #333;
+}
+
+.entry-title a:hover {
+    color: #0073aa;
+}
+
+.entry-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.entry-content {
+    margin-bottom: 20px;
+}
+
+.entry-content p {
+    margin-bottom: 20px;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.entry-footer {
+    font-size: 14px;
+    color: #666;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.read-more:hover {
+    background-color: #005177;
+    color: #fff;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.pagination .current {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.widget {
+    margin-bottom: 40px;
+}
+
+.widget-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0073aa;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.widget ul li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    clear: both;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.site-footer a:hover {
+    color: #0073aa;
+}
+
+/* ==========================================================================
+   Comments
+   ========================================================================== */
+
+.comments-area {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #eee;
+}
+
+.comment-list {
+    list-style: none;
+}
+
+.comment {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .content-area,
+    .widget-area {
+        width: 100%;
+        float: none;
+        padding-right: 0;
+    }
+
+    .main-navigation ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .entry-title {
+        font-size: 24px;
+    }
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 20px;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header */
+.custom-logo-link img{
+    max-width: 100px;
+}
+.compare-prices {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.25fr 1fr;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    padding-left: 20px;
+    display: grid;
+    gap: 10px;
+    grid-auto-columns: 1fr;
+}
+.compare-prices > .price {
+    font-size: 18px;
+    color: #e4e8f1;
+    font-weight: 500;
+}
+.compare-prices > .country {
+    font-size: 26px;
+    color: #f9f9fb;
+    font-weight: 500;
+}
+.procedure-locations.layout-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;  
+}
+.procedure-locations .location-card{
+    border-radius:16px;
+    transition: transform .25s ease, box-shadow .25s ease;
+    overflow:hidden;
+    box-shadow:0 10px 15px -3px #0000001a;
+    will-change:transform;
+}
+
+.procedure-locations .location-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 50px -12px rgba(0,0,0,.18);
+}
+
+.procedure-locations .location-card .location-thumb-wrap {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ededed;
+}
+.procedure-locations .location-card .location-body {
+    padding: 24px;
+}
+
+.procedure-locations .location-card .location-body .location-title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #2d3748;
+}
+.procedure-locations .location-card .location-footer {
+    border-top: 1px solid #e4e8f1;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 16px;
+    padding-top: 16px;
+    display: flex;
+}
+.procedure-locations .location-card .location-footer .price{
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+.procedure-locations .location-card .location-footer .label{
+    color: #4a5565;
+}
+.procedure-locations .location-card .location-footer .value{
+    font-size: 18px;
+    font-weight: 600;
+}
+.procedure-locations .location-card .location-footer .learn-more-btn {
+    padding: 8px 12px;
+    border: 1px solid #020e27;
+    color: #020e27;
+    text-align: center;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all .3s;
+    display: flex;
+}
+.procedure-locations .location-card .location-footer .learn-more-btn:hover {
+    color: #fff;
+    background-color: #020e27;
+}
+
+/* ==========================================================================
+   FAQ Accordion/Collapse Styles
+   ========================================================================== */
+
+.hospital-faq-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.hospital-faq-wrapper .faq-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #020e27;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
+}
+
+.faq-item.active {
+    border-color: #0073aa;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    cursor: pointer;
+    background: #fff;
+    transition: background 0.3s ease;
+    user-select: none;
+}
+
+.faq-question:hover {
+    background: #f3f4f6;
+}
+
+.faq-item.active .faq-question {
+    background: #eff6ff;
+}
+
+.faq-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.faq-question h3 {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.faq-toggle {
+    font-size: 28px;
+    font-weight: 300;
+    color: #6b7280;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    display: none;
+    background: #fff;
+}
+
+.faq-answer-content {
+    padding: 20px 20px 20px 60px;
+    color: #4b5563;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.faq-answer-content p {
+    margin: 0 0 15px 0;
+}
+
+.faq-answer-content p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer-content ul,
+.faq-answer-content ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.faq-answer-content li {
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hospital-faq-wrapper .faq-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .faq-question {
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .faq-question h3 {
+        font-size: 16px;
+    }
+    
+    .faq-answer-content {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .faq-icon {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================================
+   Hospital Gallery Styles
+   ========================================================================== */
+
+.hospital-gallery-wrapper {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.hospital-gallery-wrapper .gallery-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #020e27;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Main Viewer */
+.gallery-main-viewer {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-main-viewer .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation Arrows */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #020e27;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    opacity: 0;
+}
+
+.gallery-main-viewer:hover .gallery-nav {
+    opacity: 1;
+}
+
+.gallery-nav:hover {
+    background: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-prev {
+    left: 20px;
+}
+
+.gallery-next {
+    right: 20px;
+}
+
+/* Image Counter */
+.gallery-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gallery-counter .current {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* Thumbnail Slider */
+.gallery-thumbnails-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 5px 0;
+}
+
+.gallery-thumb {
+    position: relative;
+    flex: 0 0 calc(25% - 11.25px);
+    aspect-ratio: 1.6;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.gallery-thumb:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-thumb.active {
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.2);
+}
+
+.gallery-thumb img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumb:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay effect */
+.gallery-thumb::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+.gallery-thumb:hover::after {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-thumb.active::after {
+    background: rgba(0, 115, 170, 0.3);
+}
+
+/* Thumbnail Navigation */
+.thumb-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e5e7eb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #020e27;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumb-nav:hover {
+    background: #fff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.thumb-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.thumb-prev {
+    left: -15px;
+}
+
+.thumb-next {
+    right: -15px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-main-viewer {
+        height: 500px;
+    }
+    
+    .gallery-thumb {
+        flex: 0 0 calc(33.333% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hospital-gallery-wrapper .gallery-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .gallery-main-viewer {
+        height: 400px;
+        border-radius: 8px;
+    }
+    
+    .gallery-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+    
+    .gallery-prev {
+        left: 10px;
+    }
+    
+    .gallery-next {
+        right: 10px;
+    }
+    
+    .gallery-thumb {
+        flex: 0 0 calc(50% - 7.5px);
+    }
+    
+    .thumb-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-main-viewer {
+        height: 300px;
+    }
+    
+    .gallery-counter {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+    
+    .gallery-thumbnails {
+        gap: 10px;
+    }
+    
+    .gallery-thumb {
+        flex: 0 0 calc(50% - 5px);
+    }
+}

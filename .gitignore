@@ -1,0 +1,78 @@
+# Uploads & Cache
+uploads/
+cache/
+backup-db/
+backups/
+blogs.dir/
+upgrade/
+
+# Plugins (ignore all, add exceptions below if needed)
+plugins/
+# !plugins/your-custom-plugin/
+
+# Themes (ignore all except your theme)
+themes/twenty*/
+# Keep your custom theme
+!themes/HealthGoVietNam/
+
+# Database & Debug
+*.sql
+*.sql.gz
+debug.log
+error_log
+
+# OS & IDE
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node & Package Managers
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build & Compiled
+*.log
+*.pot
+*.mo
+.sass-cache/
+.cache/
+
+# Composer
+/vendor/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Elementor Cache
+et-cache/
+cache/elementor/
+
+# WP Rocket
+wp-rocket-config/
+cache/wp-rocket/
+cache/busting/
+
+# Other Cache Plugins
+w3tc-config/
+cache/autoptimize/
+cache/total-cache/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
