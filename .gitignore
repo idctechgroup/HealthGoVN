@@ -1,5 +1,4 @@
-# Uploads & Cache
-uploads/
+# Cache & Backups
 cache/
 backup-db/
 backups/
